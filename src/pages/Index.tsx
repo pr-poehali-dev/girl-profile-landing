@@ -1,10 +1,55 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activePhoto, setActivePhoto] = useState(0);
+  const [formData, setFormData] = useState({ name: '', contact: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/620c216f-bde8-41ad-8f1b-a9ee4d22bb1d', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: 'Сообщение отправлено! 🎉',
+          description: 'Скоро с вами свяжутся',
+        });
+        setFormData({ name: '', contact: '', message: '' });
+      } else {
+        toast({
+          title: 'Ошибка отправки',
+          description: result.error || 'Попробуйте позже',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Ошибка соединения',
+        description: 'Проверьте интернет',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const photos = [
     'https://cdn.poehali.dev/projects/f74af6d8-ba73-4a21-9308-a8ed665d227b/files/b92dee49-2f69-4bc2-a3e6-2a0c086651c9.jpg',
