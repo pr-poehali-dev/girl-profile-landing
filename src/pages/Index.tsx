@@ -52,9 +52,10 @@ const Index = () => {
   };
 
   const photos = [
-    'https://cdn.poehali.dev/projects/f74af6d8-ba73-4a21-9308-a8ed665d227b/files/b92dee49-2f69-4bc2-a3e6-2a0c086651c9.jpg',
-    'https://cdn.poehali.dev/projects/f74af6d8-ba73-4a21-9308-a8ed665d227b/files/a9614c32-4b02-466f-9bff-e61667f3435c.jpg',
-    'https://cdn.poehali.dev/projects/f74af6d8-ba73-4a21-9308-a8ed665d227b/files/8a87edc3-0c53-4cd2-83f6-18c6caed49ac.jpg',
+    'https://cdn.poehali.dev/files/1766846887694ff1a766d06.jpg',
+    'https://cdn.poehali.dev/files/video_2025-12-29_23-51-16 (5).png',
+    'https://cdn.poehali.dev/files/17670431806952f06c24a5d (1).png',
+    'https://cdn.poehali.dev/files/1766847438694ff3ce6656b.jpg',
   ];
 
   const interests = [
@@ -90,7 +91,7 @@ const Index = () => {
             Алиса ✨
           </h1>
           
-          <p className="text-xl text-gray-700 mb-6">24 года • Москва 🌆</p>
+          <p className="text-xl text-gray-700 mb-6">20 лет • 164 см • 45 кг • 2 размер 🌆</p>
           
           <div className="flex gap-4 justify-center flex-wrap">
             <Button
@@ -119,11 +120,63 @@ const Index = () => {
               <h2 className="text-3xl font-bold mb-4 flex items-center gap-3 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
                 <span className="text-4xl">🎀</span> О себе
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Привет! Я Алиса — творческая и позитивная девушка, которая обожает жизнь во всех её проявлениях. 
-                Люблю узнавать новое, общаться с интересными людьми и создавать незабываемые моменты. 
-                Верю, что каждая встреча — это маленькое приключение! 🌈
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Полностью реальная, фото мои. Приглашаю к себе или приеду к тебе.
               </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Моя игривость и страстность сведут на нет все твои сомнения и позволят тебе открыться новым ощущениям. Со мной ты почувствуешь себя живым и настоящим, потому что я готова погрузить тебя в мир, где нет места стеснению и сдержанности.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                Не принимаю мужчин в сильном алкогольном и нар. опьянении, не тратьте пожалуйста наше с вами драгоценное время.
+              </p>
+              
+              <div className="mt-8">
+                <h3 className="text-2xl font-bold mb-4 text-pink-600">💰 Прайс</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-gradient-to-br from-pink-100 to-purple-100 p-4 rounded-xl">
+                    <p className="text-lg font-bold text-pink-700 mb-2">Апартаменты</p>
+                    <div className="space-y-2 text-gray-700">
+                      <p>1 час — <span className="font-bold">10 000 ₽</span></p>
+                      <p>2 часа — <span className="font-bold">20 000 ₽</span></p>
+                      <p>ночь — <span className="font-bold">72 000 ₽</span></p>
+                    </div>
+                  </div>
+                  <div className="bg-gradient-to-br from-orange-100 to-pink-100 p-4 rounded-xl">
+                    <p className="text-lg font-bold text-orange-700 mb-2">Выезд</p>
+                    <div className="space-y-2 text-gray-700">
+                      <p>1 час — <span className="font-bold">10 000 ₽</span></p>
+                      <p>2 часа — <span className="font-bold">20 000 ₽</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8">
+                <h3 className="text-2xl font-bold mb-4 text-purple-600">🌟 Услуги</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="font-bold text-purple-700 mb-2">Основные:</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Классический секс</span>
+                      <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">ЖМЖ</span>
+                      <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Минет в презервативе</span>
+                      <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Минет без презерватива</span>
+                      <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Куннилингус</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-bold text-pink-700 mb-2">Дополнительные:</p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">Окончание на лицо</span>
+                      <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm">Окончание на тело</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 p-4 bg-green-50 rounded-xl border-2 border-green-200">
+                <p className="text-green-800 font-semibold text-center">✅ Фото проверены 24.05.2025</p>
+              </div>
             </CardContent>
           </Card>
         </section>
