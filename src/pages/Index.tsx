@@ -57,6 +57,7 @@ const Index = () => {
     'https://cdn.poehali.dev/files/video_2025-12-29_23-51-16 (5).png',
     'https://cdn.poehali.dev/files/17670431806952f06c24a5d (1).png',
     'https://cdn.poehali.dev/files/1766847438694ff3ce6656b.jpg',
+    'https://cdn.poehali.dev/files/1766847718694ff4e6cbd5a.jpg',
   ];
 
   const interests = [
@@ -98,7 +99,7 @@ const Index = () => {
             <Button
               size="lg"
               className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://t.me/Wonderful_Alice7', '_blank')}
+              onClick={() => window.open('https://t.me/Wonderful_Alice8', '_blank')}
             >
               <Icon name="Send" className="mr-2" size={20} />
               Telegram
@@ -106,11 +107,11 @@ const Index = () => {
             
             <Button
               size="lg"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://wa.me/79628608529', '_blank')}
+              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              onClick={() => window.open('tel:+79628608529')}
             >
               <Icon name="Phone" className="mr-2" size={20} />
-              WhatsApp
+              Позвонить
             </Button>
           </div>
         </section>
@@ -332,16 +333,16 @@ const Index = () => {
                   size="lg"
                   variant="secondary"
                   className="bg-white text-pink-600 hover:bg-pink-50 font-semibold shadow-lg transition-all duration-300 hover:scale-105"
-                  onClick={() => window.open('https://t.me/Wonderful_Alice7', '_blank')}
+                  onClick={() => window.open('https://t.me/Wonderful_Alice8', '_blank')}
                 >
                   <Icon name="Send" className="mr-2" size={20} />
-                  @Wonderful_Alice7
+                  @Wonderful_Alice8
                 </Button>
                 
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="bg-white text-green-600 hover:bg-green-50 font-semibold shadow-lg transition-all duration-300 hover:scale-105"
+                  className="bg-white text-blue-600 hover:bg-blue-50 font-semibold shadow-lg transition-all duration-300 hover:scale-105"
                   onClick={() => window.open('tel:+79628608529')}
                 >
                   <Icon name="Phone" className="mr-2" size={20} />
