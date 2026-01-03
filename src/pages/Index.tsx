@@ -52,6 +52,7 @@ const Index = () => {
   };
 
   const photos = [
+    'https://cdn.poehali.dev/files/1766847986694ff5f203307.jpg',
     'https://cdn.poehali.dev/files/1766846887694ff1a766d06.jpg',
     'https://cdn.poehali.dev/files/video_2025-12-29_23-51-16 (5).png',
     'https://cdn.poehali.dev/files/17670431806952f06c24a5d (1).png',
@@ -91,7 +92,7 @@ const Index = () => {
             Алиса ✨
           </h1>
           
-          <p className="text-xl text-gray-700 mb-6">20 лет • 164 см • 45 кг • 2 размер 🌆</p>
+          <p className="text-xl text-gray-700 mb-6">40 лет • 164 см • 55 кг • 3 размер 🌆</p>
           
           <div className="flex gap-4 justify-center flex-wrap">
             <Button
