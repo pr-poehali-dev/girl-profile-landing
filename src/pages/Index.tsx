@@ -199,6 +199,70 @@ const Index = () => {
         </section>
 
         <section className="mb-12 animate-scale-in">
+          <Card className="border-0 shadow-xl bg-white/90 backdrop-blur">
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-bold mb-2 text-center bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent flex items-center justify-center gap-3">
+                <Icon name="Mail" size={32} className="text-pink-600" />
+                Напишите мне
+              </h2>
+              <p className="text-center text-gray-600 mb-6">Оставьте сообщение и я обязательно отвечу! 💌</p>
+              
+              <form onSubmit={handleSubmit} className="space-y-4 max-w-xl mx-auto">
+                <div>
+                  <Input
+                    placeholder="Ваше имя"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                    className="text-lg border-2 focus:border-pink-400"
+                  />
+                </div>
+                
+                <div>
+                  <Input
+                    placeholder="Telegram или телефон"
+                    value={formData.contact}
+                    onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
+                    required
+                    className="text-lg border-2 focus:border-pink-400"
+                  />
+                </div>
+                
+                <div>
+                  <Textarea
+                    placeholder="Ваше сообщение"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                    rows={5}
+                    className="text-lg border-2 focus:border-pink-400 resize-none"
+                  />
+                </div>
+                
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Icon name="Loader2" className="mr-2 animate-spin" size={20} />
+                      Отправка...
+                    </>
+                  ) : (
+                    <>
+                      <Icon name="Send" className="mr-2" size={20} />
+                      Отправить
+                    </>
+                  )}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-12 animate-fade-in">
           <Card className="border-0 shadow-xl bg-gradient-to-br from-pink-500 via-purple-500 to-orange-500 text-white">
             <CardContent className="p-8 text-center">
               <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3">
@@ -206,7 +270,7 @@ const Index = () => {
                 Контакты
               </h2>
               <p className="text-lg mb-6 opacity-90">
-                Свяжитесь со мной любым удобным способом! 💌
+                Или свяжитесь напрямую! 📱
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
